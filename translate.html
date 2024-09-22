@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+</head>
+<body>
+    <script>
+        const data = {
+  source_language: 'en',
+  target_language: 'id',
+  text: 'What is your name?'
+}; 
+
+const options = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'X-RapidAPI-Key': 'f01e14118fmshc6019205f821e31p1d75d1jsn12e8a38001a7',
+    'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
+  },
+  body: new URLSearchParams(data)
+};
+
+fetch('https://text-translator2.p.rapidapi.com/translate', options)
+  .then(response => response.text())
+  .then(responseText => console.log(responseText))
+  .catch(error => console.error(error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../myblog.html/aiImage"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "API"
+  }
+}

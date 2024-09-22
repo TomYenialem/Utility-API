@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convertor</title>
+</head>
+<style>
+    .conatnior{
+        display: flex;
+        align-items: center;
+        height:60vh;
+        justify-content: center;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+        flex-direction: column;
+        position: relative;
+        margin-top: 100px;
+        border-radius: 20px;
+        
+    }
+    .selection{
+        display: flex;
+        gap: 400px;
+    }
+    .btn{
+        padding: 10px 20px;
+        background-color: rgb(228, 10, 10);
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        /* margin-top: 100px; */
+        border: none;
+        }
+        span{
+            color: rgb(228, 10, 10);
+        }
+       img{
+        position: absolute;
+        left: 10px;
+        top: 110px;
+        color: rgb(228, 10, 10);
+       }
+       .outputs{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin-right: 500px;
+        margin-top: 20px;
+        line-height: 1;
+       }
+</style>
+<body>
+  <header>
+    <img src="../myblog.html/aiImage/utility.png" alt="" style="width: 70px;">
+</header>
+    <div class="conatnior">
+        <h1>Currency <span>Convertor</span></h1>
+        <label for="" style="padding: 10px;">Enter Your old currency</label>
+        <input type="number" placeholder="Enter Amount" id="amount" min="0">
+        <div class="selection">
+            
+            <div class="select1">
+                <label for="">Old Currency</label>
+                <select name="" id="">
+                    <option value="USD" id="old">USD</option>
+                    <option value="USD">EUR </option>
+                    <option value="USD">GBP</option>
+                    <option value="USD">CNY</option>
+                    <option value="USD">CAD</option>
+                    <option value="USD">AUD</option>
+                </select>
+            </div>
+           
+            <div class="select2">
+                <label for="">New currency</label>
+                <select name="" id="">
+                    <option value="EUR" id="news">EUR</option>
+                    <option value="USD">USD</option>
+                    <option value="USD">GBP</option>
+                    <option value="USD">CNY</option>
+                    <option value="USD">CAD</option>
+                    <option value="USD">AUD</option>
+                
+                </select>
+            </div>
+        </div>
+        <div class="outputs">
+            <p>new_amount</p> 
+            <p>new_currency</p>
+            <p>old-currency</p>
+      
+        </div>
+     
+        <button class="btn"> Convertor</button>
+    </div>
+
+
+<script>
+    
+    const btn=document.querySelector('.btn');
+    
+    let amounts=document.querySelector('#amount');
+    let olds=document.querySelector('#old')
+    let current=document.querySelector('#news')
+    let Apikey='fca_live_WgzmKrCvbvwBc3849fdCmakGUoa74VNNxbvqDWez'
+    
+
+    
+    const option={
+     method:'Get',
+     headers: {
+         'X-Api-Key':Apikey }
+
+    }
+    btn.addEventListener('click',currency);
+    function currency(){
+    let news=current.value;
+    let old=olds.value;
+    let amount=amounts.value
+     fetch(`https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_WgzmKrCvbvwBc3849fdCmakGUoa74VNNxbvqDWez&currencies=${current}%2CUSD%2CCAD`,option)
+     
+     .then(res=>res.json())
+     .then(data=>{
+        console.log(data)
+     })
+        
+    //     document.querySelector(".outputs").childNodes[1].innerHTML=`new_amount :${data.new_amount}`
+    //     document.querySelector(".outputs").childNodes[3].innerHTML=`new_currency :${data.new_currency}`
+    //     document.querySelector(".outputs").childNodes[5].innerHTML=`old-currency: ${data.old_currency}`
+    //  }).catch((err)=>{
+    //     alert("An error occurred while converting currency. Please try again later.");
+    //  })
+    }
+</script>
+
+</body>
+</html>

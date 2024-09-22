@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisies</title>
+</head>
+<body>
+ <script>
+    //when we are using fetch even if url is wrong we get the response but not the actuall values 
+    //  the response is not 200 and the "OK " property is false;
+    // fetch('').then(res=>{
+    //     console.log('ok',res)// if even the fecthc is emtpty the response is ok
+    // }).catch(err=>{
+    //     console.log('error',err)
+    // })
+    // //so this error is coming only when there is not interet or not connection 
+
+
+
+    //PROMISES
+//  async function prom(){
+//   let res= await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/hi');
+//   let data=await res.json()
+//   return data
+  
+// }
+// let x=prom()
+// //  console.log(x)// this resolove promises but we dont need promises
+// // instade we always should use the then method
+// prom().then(data=>{console.log(data)})
+// .catch((err)=>{
+//   console.log('erorr',err)
+// })
+movie()
+let arr=[
+
+{title:'balck panter',year:2017},
+{title:'harry potter',year :2010}
+]
+ function movie(){
+  let x='';
+  setTimeout(()=>{
+    arr.forEach(movies=>{
+x+=`<li>${movies.title}</li>`
+    })
+    document.body.innerHTML=x
+  },3000)
+ 
+ }
+
+ </script>   
+</body>
+</html>

@@ -1,0 +1,92 @@
+@media (max-width:730px){
+    .polygon{
+   
+        background-color: black;
+    }
+  
+    .lists p a{
+        color: rgb(235, 100, 4) ;
+       
+         
+        
+    }
+   
+   .shape{
+        display: none;
+    }
+    .list-itmes{
+        display: flex;
+        flex-direction:column;
+
+    }
+    .sub-title{
+        display: none;
+    }
+    .list-items{
+        background-color:  rgb(235, 100, 4) ;
+        padding: 0px 100px;
+    }
+    .lists{
+      
+        margin-top: 350px;
+        position: unset;
+       
+       
+    }
+    .lists p{
+        width: 100%;
+        text-align: start;
+        padding:10px 20px;
+
+
+    }
+    .lists p a{
+        color: rgb(235, 100, 4)  ;
+
+    }
+    .menu{
+        display: none;
+    }
+   
+}
+@media (max-width:1180px){
+    .lists p a{
+        color: rgb(26, 18, 12) ;
+       
+         
+        
+    }
+  
+}
+@media (max-width:599px){
+    .conatiner{
+        
+      
+        left: 20%;
+        padding: 20px 30px;
+        
+}
+}
+body{
+    padding-bottom: 600px;
+}
+@media (max-width:399px){
+    .conatiner{
+        
+       top:25%;
+        left: 20%;
+        padding: 30px 10px;
+        
+}
+}
+@media (max-width:299px){
+    .conatiner{
+        
+       top:25%;
+        left: 10%;
+        padding: 30px 10px;
+        
+}
+
+}
+

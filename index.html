@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Blogs</title>
+    <link rel="stylesheet" href="api.css">
+    <link rel="stylesheet" href="apiMedia.css">
+    <link rel="icon" href="utility.png" type="png" />
+</head>
+
+</style>
+<body>
+   <div class="head">
+    <div class="image">
+        <img src='./utility.png' alt="">
+        <div class="polygon">
+            
+        </div>
+       
+    </div>
+   
+    <!-- <div class="menu">
+        <ul><li><a href="">home</a></li></ul>
+        <ul><li><a href="">Contact</a></li></ul>
+        <ul><li><a href="">Services</a></li></ul>
+    </div> -->
+   </div>
+   <div class="conatinor">
+    <div class="title"> 
+        <h1>Utility <span>Blogs</span></h1>
+        <h2>wellcome to mini quick <span>utilities</span></h2>
+       
+         <button class="btn">sign in </button>
+    </div>
+ 
+
+        <div class="sub-title"> 
+            <div class="shape">
+                
+                </div>
+        </div>
+        <div class="list-itmes">
+            <div class="lists">
+                <!-- <p><a href="currency.html">currency convertor</a></p> -->
+                <p><a href="Dictinary.html">Dictionary</a></p>
+                <p><a href="dadjokes.html">Dad Jokes</a></p>
+                <p><a href="city.html">city</a></p>
+                <p><a href="weather.html">Weather</a></p>
+                <p><a href="crypto price.html">Crypto Price</a></p>
+                
+        </div>  
+        
+    </div>
+   
+
+      
+   </div>
+  <div id="signup">
+    <div class="conatiner">
+        <input type="email" placeholder="Email"><span class="close">X</span>
+        <input type="password" placeholder="password">
+
+        <button class="submit">submit</button>
+    </div>
+
+  </div>
+</div>
+    <script >
+    let btn=document.querySelector('.btn')
+    let cont=document.querySelector('.conatiner');
+    let close=document.querySelector('.close')
+    let submit=document.querySelector('.submit')
+    console.log()
+ btn.addEventListener('click',()=>{
+cont.classList.toggle('open');
+ })
+close.addEventListener('click',()=>{
+    cont.classList.remove('open')
+})
+submit.addEventListener('click',()=>{
+
+    if( cont.childNodes[1].value.includes('@gmail.com')&&cont.childNodes[1].value!==''){
+        alert('Registerd')
+    cont.classList.remove('open')
+    }
+   else{
+    alert('Please fill the field or Incorrect email format')
+   }
+
+})
+    </script>
+</body>
+</html>
